@@ -1,0 +1,17 @@
+{
+  "name": "notes-app",
+  "version": "1.0.0",
+  "description": "it's a notes app. Any one can add, remove, list, read all those notes through command.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Salman Farshe",
+  "license": "ISC",
+  "devDependencies": {
+    "chalk-v2": "^1.0.2",
+    "fs-extra": "^10.0.0",
+    "nodemon": "^2.0.15",
+    "yargs": "^17.3.0"
+  }
+}
