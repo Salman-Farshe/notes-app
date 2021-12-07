@@ -30,4 +30,22 @@ yargs.command({
     }
 })
 
+// ======================= Remove Command ===================
+yargs.command({
+    command: 'remove',
+    describe: 'Remove a Note',
+    builder: {
+        title: {
+            describe: 'Title of a Notes',
+            demandOption: true,
+            type: 'string'
+        }
+    },
+    // argument vector
+    handler: (argv) => {
+        notes.removeNote(argv.title)
+    }
+})
+
+
 console.log(yargs.argv)

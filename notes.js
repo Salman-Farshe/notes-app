@@ -42,9 +42,24 @@ const addNote = (title, body) => {
     }
 }
 
+// ======================= remove notes =====================
+const removeNote = (title) => {
+    const notes = loadNote()
+    const notesToKeep = notes.filter(note => {
+        return note.title !== title
+    })
+
+    if(notesToKeep.length < notes.length){
+        saveNote(notesToKeep)
+        console.log(chalk.green('Removed Note Successfully..'))
+    } else{
+        console.log(chalk.red('Notes Not Found.. Please Check Again..'))
+    }
+}
 
 
 // exports module into the app.js file
 module.exports = {
-    addNote: addNote
+    addNote: addNote,
+    removeNote: removeNote
 }
