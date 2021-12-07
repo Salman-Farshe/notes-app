@@ -47,5 +47,14 @@ yargs.command({
     }
 })
 
+// ======================= List Command ======================
+yargs.command({
+    command: 'list',
+    describe: 'List All of Notes',
+    handler: () => {
+        notes.listNote()
+    }
+})
+
 
 console.log(yargs.argv)
